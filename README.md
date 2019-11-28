@@ -1,0 +1,2 @@
+# Self-Sizing
+tableView - collectionview
