@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5ld-zA-c2h">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--self-sizing-->
+        <scene sceneID="siq-BK-32B">
+            <objects>
+                <tableViewController id="x9Y-Nc-mUJ" customClass="ViewController" customModule="TableviewCellSizing" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uSz-O4-gUt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="233" id="aPI-wQ-TKO" customClass="CustomTableViewCell" customModule="TableviewCellSizing" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="233"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="aPI-wQ-TKO" id="f66-tC-Xg7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r1h-nK-HH5">
+                                            <rect key="frame" x="20" y="167.5" width="374" height="54.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Quotes Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDA-bl-Eny">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUa-eh-5zB">
+                                                    <rect key="frame" x="0.0" y="30.5" width="115" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" red="0.69734948870000002" green="0.3045880198" blue="0.27437740560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="qDA-bl-Eny" secondAttribute="trailing" id="Dmc-I1-WhD"/>
+                                            </constraints>
+                                        </stackView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="FeO-W2-MAp">
+                                            <rect key="frame" x="40" y="21" width="334" height="136.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="6TX-g0-uEB"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="330" id="sKB-wR-ezP"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="FeO-W2-MAp" secondAttribute="trailing" constant="20" id="Gso-wH-JGR"/>
+                                        <constraint firstItem="r1h-nK-HH5" firstAttribute="leading" secondItem="f66-tC-Xg7" secondAttribute="leadingMargin" id="QXo-Wq-lZf"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="r1h-nK-HH5" secondAttribute="trailing" id="TVJ-wn-yaM"/>
+                                        <constraint firstItem="FeO-W2-MAp" firstAttribute="leading" secondItem="f66-tC-Xg7" secondAttribute="leadingMargin" constant="20" id="U5T-aL-0Wi"/>
+                                        <constraint firstItem="r1h-nK-HH5" firstAttribute="top" secondItem="FeO-W2-MAp" secondAttribute="bottom" constant="10" id="a3r-QM-ipe"/>
+                                        <constraint firstItem="FeO-W2-MAp" firstAttribute="top" secondItem="f66-tC-Xg7" secondAttribute="topMargin" constant="10" id="k0g-Gm-NY3"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="r1h-nK-HH5" secondAttribute="bottom" id="oof-3w-RBB"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageDisplay" destination="FeO-W2-MAp" id="sBE-Zp-FDQ"/>
+                                    <outlet property="noidung" destination="qDA-bl-Eny" id="s1K-xl-UPM"/>
+                                    <outlet property="tavgia" destination="LUa-eh-5zB" id="h4T-6A-BM5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="x9Y-Nc-mUJ" id="Owi-zk-oKX"/>
+                            <outlet property="delegate" destination="x9Y-Nc-mUJ" id="pFZ-fP-2NZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="self-sizing" id="da2-Hx-tTS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3L2-TY-fVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="121"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ezl-pk-I2o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5ld-zA-c2h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="rho-1N-UMV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.69734948870000002" green="0.3045880198" blue="0.27437740560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="x9Y-Nc-mUJ" kind="relationship" relationship="rootViewController" id="A7d-oQ-qe7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dib-d0-ILM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166.66666666666669" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+</document>
